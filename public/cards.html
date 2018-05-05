@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cards</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+<div class="container">
+    <header>
+        <div>Карточки</div>
+        <nav class="upBtn">
+            <div class="button">
+                <a class="links" href="/">На главную</a>
+            </div>
+            <div class="button">
+                <a class="links" href="bonuscards.html">Бонусные карточки</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="wrapper">
+
+            <section class="moneyChange" >
+                <form class="getCard">
+                    <div><span class="element"> Год вашего рождения:</span> <input type="text" value="" id="year"></div>
+                    <div><span class="element"> Сумма займа:</span>  <input type="text"  value="" id="moneySum"></div>
+                    <div><span class="element"> Срок погашения:</span>  <input type="text"  value="" id="monthSum"></div>
+                    <div><span class="element"> Подходящая карта рассрочки:</span>  <input type="text"  value="" id="resultCard"></div>
+                    <input type="button" value="Подобрать карту" id='btnResultCard' class="button">
+                    <div id="moreInf"></div>
+                </form>
+            </section>
+
+            <section >
+                <article class="cards"  id="halva">
+                    <div class="pic">
+                        <img src="images/creditcards/halva.png" height="205" width="309" class="crcard"/>
+                    </div>
+
+                    <div class="text">
+                        <div class="info">
+                            Кредитный лимит от 500 до 5 000 рублей на любые покупки.
+                        </div>
+                        <div class="info">
+                            Пользуйтесь кредитом первые 20 дней по ставке всего 0,1% годовых. После погашения задолженности льготный период будет снова доступен.
+                        </div>
+                        <div class="features">
+                            Для оформления кредита не требуются справка о доходах
+                            (при сумме кредита до 3 000 рублей), залог, поручительство или страховка. Никаких скрытых комиссий: только процентная ставка. Бесплатные выпуск и оформление карточки.
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cards"  id="pokupok">
+                    <div class="pic">
+                        <img src="images/creditcards/pokupok.png" height="205" width="309" class="crcard"/>
+                    </div>
+                    <div class="text">
+                        <div class="info">
+                            Кредитный лимит от 500 до 7 000 рублей на любые покупки.
+                        </div>
+                        <div class="info">
+                            Пользуйтесь кредитом первые 15 дней по ставке всего 0,1% годовых.
+                        </div>
+                        <div class="features">
+                            Для оформления кредита не требуются справка о доходах
+                            (при сумме кредита до 3 000 рублей), залог, поручительство или страховка. Никаких скрытых комиссий: только процентная ставка. Бесплатные выпуск и оформление карточки.
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="cards"  id="smart">
+                    <div class="pic">
+                        <img src="images/creditcards/smart.png" height="205" width="309" class="crcard"/>
+                    </div>
+                    <div class="text">
+                        <div class="info">
+                            Сумма кредита от 5000 до 15 000 рублей на любые покупки.
+                        </div>
+                        <div class="info">
+                            Пользуйтесь кредитом первые 5 дней по ставке всего 0,1% годовых. После погашения задолженности льготный период будет снова доступен.
+                        </div>
+                        <div class="features">
+                            Для оформления кредита не требуются залог, поручительство или страховка. Никаких скрытых комиссий: только процентная ставка. Бесплатные выпуск и оформление карточки.
+                        </div>
+                    </div>
+
+                </article>
+
+
+
+            </section>
+
+
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper cooperation"> More details you can clarity by following phone:
+            <a href="tel:+375447632309" class="phoneNumber">+375 44 763 23 09</a>
+        </div>
+    </footer>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="scripts/cards.js"></script>
+<script>
+    $(document).ready(function(){
+        $("a[href*='#']").on("click", function(e){
+            var anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $(anchor.attr('href')).offset().top
+            }, 777);
+            e.preventDefault();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>
